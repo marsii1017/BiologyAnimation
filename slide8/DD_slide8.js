@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    var correct =0;
     $(".answer").draggable();
     $(".question").droppable({
         refreshPositions: true,
@@ -18,6 +17,7 @@ $(document).ready(function () {
         }
     });
     $( "#submit" ).click(function() {
+        var correct =0;
         $('.question').each(function() {
             console.log($(this).attr("id"));
             if($(this).attr("id") == $(this).text()){
